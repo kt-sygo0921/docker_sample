@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>てきすとえでぃたー</title>
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <script src="./node_modules/ace-builds/src/ace.js"></script>
+    <script src="./node_modules/ace-builds/src/mode-javascript.js"></script>
+    <script src="./node_modules/ace-builds/src/theme-twilight.js"></script>
+    <script src="./editor.js"></script>
+</head>
+
+<body>
+    <div id="header_fixed">
+        <button type="button" class="btn-sm btn-primary" onclick="openLoadFile()">読み込み</button>
+        <buttob type="button" class="btn-sm btn-primary" onclick="saveFile()">保存</buttob>
+    </div>
+    <div id="footer_fixed"></div>
+    <div id="input_area">
+        <div id="input_txt"></div>
+    </div>
+
+</body>
+
+</html>
