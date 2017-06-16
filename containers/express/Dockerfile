@@ -13,3 +13,8 @@ RUN chown -R app:app $HOME/*
 
 USER app
 WORKDIR $HOME/project
+
+RUN npm install
+
+CMD ["node","app.js"]
+

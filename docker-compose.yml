@@ -2,15 +2,17 @@ version: '3'
 services:
   nginx:
     build: ./containers/nginx
-    ports:
-      - "80:80"
     volumes:
-      - ./html:/usrshare/nginx/
+      - ./html:/usrshare/nginx/html
       - ./containers/nginx:/etc/nginx/conf.d
+    links:
+      - express:express
+    ports:
+      - 80:80
   express:
     build: ./containers/express
     ports:
-      - "8000:8000"
+      - "3000:3000"
     volumes:
       - ./containers/express:/home/app/project
       - ./containers/express/node_modules:/home/app/project/node_modules
