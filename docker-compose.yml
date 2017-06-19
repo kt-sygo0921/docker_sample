@@ -15,4 +15,4 @@ services:
       - "3000:3000"
     volumes:
       - ./containers/express:/home/app/project
-      - ./containers/express/node_modules:/home/app/project/node_modules
+      - /home/app/project/node_modules
